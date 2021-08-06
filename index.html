@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;padding: 0;
+
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+		.container{
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			width: 85%;
+		}
+		.container .box{
+			position: relative;
+			width: 450px;
+			height: 320px;
+			background: #000;
+		}
+		.container .box .videoBox{
+			position: absolute;
+			top: 0;left: 0;
+			width: 100%;height:100%;
+		}
+		.container .box .videoBox video{
+			position: absolute;
+			top: 0;left: 0;
+			width: 100%;height:100%;
+			object-fit: cover;/* Pour plein 100% le div */
+		}
+		.container .box .contentBox{
+			position: absolute;
+			top: 40px;
+			bottom: 40px;
+			right: 40px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgba(0,0,0,0.9);
+			transition: transform 0.8s;
+            transform-origin: right;/**/
+            transform: scaleX(0);/**/
+		}
+		.container .box:hover .contentBox{
+            transition: transform 0.6s;
+            transform-origin: left;/**/
+            transform: scaleX(1);/**/
+		}
+		.container .box .contentBox .content{
+           position: relative;
+           padding: 50px 60px;  
+
+		}
+		
+		.container .box .contentBox .content h2,p{
+			color: #fff;
+			font-weight: 500;
+			letter-spacing: 1px;
+
+		}
+		
+
+	</style>
+</head>
+<body>
+     <div class="container">
+     	   <div class="box">
+     	   	    <div class="videoBox">
+     	   	    	<video src="foret.mp4" muted autoplay></video>
+     	   	    </div>
+     	   	    <div class="contentBox">
+     	   	    	  <div class="content">
+     	   	    	  	 <h2>Video Caption One</h2>
+     	   	    	  	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     	   	    	  	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     	   	    	  	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+     	   	    	  	 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+     	   	    	  	 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     	   	    	  	 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
+     	   	    	  </div>
+     	   	    </div>
+     	   </div>
+     	      <div class="box">
+     	   	    <div class="videoBox">	
+     	   	    	<video src="foret.mp4" muted autoplay></video>
+     	   	    </div>
+     	   	    <div class="contentBox">
+     	   	    	  <div class="content">
+     	   	    	  	 <h2>Video Caption One</h2>
+     	   	    	  	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     	   	    	  	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     	   	    	  	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+     	   	    	  	 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+     	   	    	  	 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     	   	    	  	 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
+     	   	    	  </div>
+     	   	    </div>
+     	   </div>
+     </div>
+</body>
+</html>
